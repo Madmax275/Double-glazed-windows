@@ -19,11 +19,11 @@ namespace ConsoleApp23
             windowsList.Add(new DoubleGlazedWindow("W789", 3, 20.0, 12.0));
 
             // Display information about each window
-            //foreach (var window in windowsList)
-            //{
-            //    window.DisplayInfo();
-            //    Console.WriteLine(); // Add a newline for better readability
-            //}
+            foreach (var window in windowsList)
+            {
+                window.DisplayInfo();
+                Console.WriteLine(); // Add a newline for better readability
+            }
 
             Console.WriteLine("Введите первые несколько букв артикула, чтобы выполнить поиск похожих артикулов:");
             string searchLetters = Console.ReadLine();
