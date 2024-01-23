@@ -19,11 +19,11 @@ namespace ConsoleApp23
             windowsList.Add(new DoubleGlazedWindow("W789", 3, 20.0, 12.0));
 
             // Display information about each window
-            foreach (var window in windowsList)
-            {
-                window.DisplayInfo();
-                Console.WriteLine(); // Add a newline for better readability
-            }
+            //foreach (var window in windowsList)
+            //{
+            //    window.DisplayInfo();
+            //    Console.WriteLine(); // Add a newline for better readability
+            //}
 
             Console.WriteLine("Введите первые несколько букв артикула, чтобы выполнить поиск похожих артикулов:");
             string searchLetters = Console.ReadLine();
@@ -68,6 +68,18 @@ namespace ConsoleApp23
                                 if (window is SingleGlazedWindow singleGlazedWindow)
                                 {
                                     Console.WriteLine($"Thickness: {singleGlazedWindow.Thickness}");
+                                    
+                                }
+                                break;
+
+                            case "W789":
+                                // Display information about the glass unit for W456
+                                Console.WriteLine($"Glass Unit Information for {window.ArticleWindow}:");
+                                if (window is DoubleGlazedWindow doubleGlazedWindow1)
+                                {
+                                    Console.WriteLine($"Layers: {doubleGlazedWindow1.Chamberness}");
+                                    Console.WriteLine($"Thickness: {doubleGlazedWindow1.TotalThickness}");
+                                    Console.WriteLine($"GlassThickness: {doubleGlazedWindow1.GlassThickness}");
                                 }
                                 break;
 
