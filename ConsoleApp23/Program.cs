@@ -36,7 +36,7 @@ namespace ConsoleApp23
 
         static void SearchSimilarArticles(List<Window> windowsList, string searchLetters)
         {
-            Console.WriteLine($"Search results for articles starting with '{searchLetters}':");
+            Console.WriteLine($"Результаты поиска артикулов, начинающихся с '{searchLetters}':");
 
             foreach (var window in windowsList)
             {
@@ -44,7 +44,7 @@ namespace ConsoleApp23
                 {
                     Console.WriteLine(window.ArticleWindow);
 
-                    Console.WriteLine("Choose the article and enter its code:");
+                    Console.WriteLine("Выберите артикул и введите его код:");
                     string selectedArticle = Console.ReadLine();
 
                     if (string.Equals(selectedArticle, window.ArticleWindow, StringComparison.OrdinalIgnoreCase))
@@ -53,7 +53,7 @@ namespace ConsoleApp23
                         {
                             case "W123":
                                 // Display information about the glass unit for W123
-                                Console.WriteLine($"Glass Unit Information for {window.ArticleWindow}:");
+                                Console.WriteLine($"Информация о стеклопакете  {window.ArticleWindow}:");
                                 if (window is DoubleGlazedWindow doubleGlazedWindow)
                                 {
                                     Console.WriteLine($"Layers: {doubleGlazedWindow.Chamberness}");
@@ -64,7 +64,7 @@ namespace ConsoleApp23
 
                             case "W456":
                                 // Display information about the glass unit for W456
-                                Console.WriteLine($"Glass Unit Information for {window.ArticleWindow}:");
+                                Console.WriteLine($"Информация о стеклопакете  {window.ArticleWindow}:");
                                 if (window is SingleGlazedWindow singleGlazedWindow)
                                 {
                                     Console.WriteLine($"Thickness: {singleGlazedWindow.Thickness}");
@@ -74,7 +74,7 @@ namespace ConsoleApp23
 
                             case "W789":
                                 // Display information about the glass unit for W456
-                                Console.WriteLine($"Glass Unit Information for {window.ArticleWindow}:");
+                                Console.WriteLine($"Информация о стеклопакете  {window.ArticleWindow}:");
                                 if (window is DoubleGlazedWindow doubleGlazedWindow1)
                                 {
                                     Console.WriteLine($"Layers: {doubleGlazedWindow1.Chamberness}");
@@ -86,13 +86,13 @@ namespace ConsoleApp23
                             // Add cases for other articles if needed
 
                             default:
-                                Console.WriteLine("Invalid article code.");
+                                Console.WriteLine("Неизвестный артикул.");
                                 break;
                         }
                     }
                     else
                     {
-                        Console.WriteLine("Incorrect input. Please choose a valid article.");
+                        Console.WriteLine("Неверный ввод. Пожалуйста, выберите подходящий артикул.");
                     }
 
                     Console.WriteLine(); // Add a newline for better readability
